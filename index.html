@@ -15,6 +15,10 @@
         	background-color: white;
         	font-family: "Poppins", sans-serif;
         }
+        .flex-container {
+        	display: flex;
+          	flex-direction: row;
+        }
         .row {
         	display: flex;
           	flex-direction: row;
@@ -27,39 +31,138 @@
           	justify-content: center;
           	flex-wrap: wrap;
         }
+        .icon {
+        	width: 30px;
+        	margin: 20px 5px;
+        }
+        .icon:hover {
+        	transform: scale(1.2);
+        }
+        .section-title {
+        	font-size: 40px;
+        	padding: 15px;
+        	color: #26A96C;
+        	margin: 15px;
+        }
+        .section-underline {
+        	width: 50px;
+        	margin-left: 30px;
+        	border: 3px solid #62676C;
+        }
+        #pseudo-left-column {
+        	width: 356px;
+			height: 100vh;
+			background-color: white;
+        }
         #left-column {
-        	background-color: #040B14;
+        	background-color: #62676C;
         	width: 300px;
-        	position: absolute;
 			height: 100vh;
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: center;
+			position: absolute;
         }
         #small-photo {
         	width: 100px;
         	border-radius: 50%;
-        	border: solid 7px #282B3B;
+        	border: solid 7px #A1A4A7;
         	margin: 20px;
         }
         h1 {
         	color: white;
         }
+        #menu {
+        	display: flex;
+          	flex-direction: column;
+          	justify-content: flex-start !important;
+          	width: 100%;
+          	height: auto;
+        }
+        #menu a {
+        	margin: 20px 30px;
+        	text-decoration: none;
+        	color: #E0E1E2;
+        	font-size: 22px;
+        	font-weight: thin;
+        	line-height: 30px;
+        }
+        #menu a:hover {
+        	color: white;
+        }
+        #footer {
+        	width: 100%;
+        	height: 120px;
+        	display: flex;
+        	flex-direction: column;
+        	justify-content: flex-end;
+        	position: absolute;
+        	bottom: 0;
+        	align-items: center;
+        }
+        #footer p {
+        	margin-bottom: 20px;
+        	color: white;
+        }
+        #footer a {
+        	text-decoration: none;
+        	color: #E0E1E2;
+        }
+        #footer a:hover {
+        	color: white;
+        }
+        #right-column {
+        	width: 100%;
+        	background-color: blue;
+        }
+        #background-image {
+        	width: ;
+        	background-color: red;
+        	align-content: flex-end;
+        }
+        @media (max-width: 800px) {
+        	#left-column {
+        		display: none;
+        	}
+        }
 	</style>
 </head>
 <body>
-	<main id="page-content">
+	<main id="page-content" class="flex-container">
+		<div id="pseudo-left-column">
 		<section id="left-column" class="row">
-			<img src="https://www.w3schools.com/w3images/paris.jpg" id="small-photo">
+			<img src="images/small-photo.png" id="small-photo">
 			<h1>Catalin Gavrila</h1>
-			<div id="social-media" class="row"></div>
-			<nav id="menu"></nav>
-			<footer id="footer"></footer>
+			<div id="social-media" class="row">
+				<a href=""><img src="images/facebook-logo.png" class="icon"></a>
+				<a href=""><img src="images/twitter-logo.png" class="icon"></a>
+				<a href=""><img src="images/instagram-logo.png" class="icon"></a>
+				<a href=""><img src="images/linkedin-logo.png" class="icon"></a>
+				<a href=""><img src="images/whatsapp-logo.png" class="icon"></a>
+			</div>
+			<nav id="menu">
+				<a href="">Home</a>
+				<a href="">About</a>
+				<a href="">Resume</a>
+				<a href="">Portfolio</a>
+				<a href="">Services</a>
+				<a href="">Contact</a>
+			</nav>
+			<footer id="footer">
+				<p>&copy Copyright Catalin Gavrila</p>
+				<p>Webdesign by <a href="">DevCat Studios</a></p>
+			</footer>
 		</section>
+		</div>
 		<section id="right-column">
-			<div id="background-image"></div>
-			<section id="about"></section>
+			<div id="background-image" class="column">
+				<img src="images/catalin.jpeg">
+			</div>
+			<section id="about">
+				<h3 class="section-title">About</h3>
+				<hr class="section-underline">
+			</section>
 			<section id="facts"></section>
 			<section id="skills"></section>
 			<section id="resume"></section>
