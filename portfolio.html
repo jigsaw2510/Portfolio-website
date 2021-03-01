@@ -22,7 +22,6 @@
         .row {
         	display: flex;
           	flex-direction: row;
-          	justify-content: center;
           	flex-wrap: wrap;
         }
         .column {
@@ -50,7 +49,7 @@
         	border: 3px solid #62676C;
         }
         .stats {
-        	margin: 0 65px;
+        	margin: 0 30px;
         	font-size: 1em;
         	width: 50.7vw;
         	display: flex;
@@ -135,10 +134,20 @@
         }
         #right-column {
         	width: 100%;
+        	display: flex;
+        }
+        #quote {
+        	width: 300px;
+        	display: flex;
+        	align-items: center;
+        	text-align: center;
+        	font-style: italic;
+        	padding: 0 20px 20px 0;
         }
         #background-image {
-        	width: auto;
-        	align-content: flex-end;
+        	width: 100%;
+        	align-content: center;
+        	justify-content: center;
         }
         #right-column p {
         	margin: 20px 65px;
@@ -155,13 +164,28 @@
         		align-content: center;
         		justify-content: center;
         	}
+        	#right-column p {
+        		margin: 20px 30px;
+        	}
         	#menu a {
-        		margin: 0;
+        		margin: 2px;
         	}
         	#footer {
-        		margin-bottom: 60px;
+        		margin-bottom: 20px;
         	}
-        	
+        	.section-underline {
+        		margin-left: 30px;
+        	}
+        	.section-title {
+        		margin-left: 15px;
+        	}
+        	#left-column {
+        		height: 100%;
+        		min-height: 550px;
+        	}
+        	#pseudo-column {
+        		width: 306px;
+        	}
         }
         @media (max-width: 800px) {
         	#page-content {
@@ -174,12 +198,16 @@
         	#menu {
         		justify-content: center;
         		align-items: center;
+        		overflow-y: visible;
         	}
         	#menu a {
-        		margin: 0;
+        		margin: 4px;
         	}
         	#footer {
-        		margin-bottom: 60px;
+        		margin-bottom: 40px;
+        	}
+        	#background-image img {
+        		width: 100vw;
         	}
         }
         /* Progress bars start */
@@ -268,9 +296,10 @@
 			</footer>
 		</section>
 		</div>
-		<section id="right-column">
-			<div id="background-image" class="column">
-				<img src="images/catalin.jpeg">
+		<section id="right-column" class="column">
+			<div id="background-image" class="row">
+				<div id="quote">"Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate."</div>
+				<img src="images/catalin.jpeg" id="main-image">
 			</div>
 			<section id="about">
 				<h3 class="section-title">About</h3>
