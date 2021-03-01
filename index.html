@@ -95,7 +95,7 @@
         #menu {
         	display: flex;
           	flex-direction: column;
-          	justify-content: flex-start !important;
+          	justify-content: flex-start;
           	width: 100%;
           	height: auto;
         }
@@ -144,8 +144,16 @@
         	font-size: 1.1em;
         }
         @media (max-width: 800px) {
+        	#page-content {
+        		flex-direction: column;
+        	}
         	#left-column {
-        		display: none;
+        		position: absolute;
+        		width: 100%;
+        	}
+        	#menu {
+        		justify-content: center;
+        		align-items: center;
         	}
         }
         /* Progress bars start */
@@ -180,6 +188,31 @@
 		}
 
 		/* Progress bars end */
+
+		/*Back to top button start*/
+
+		#myBtn {
+			display: none;
+		  	position: fixed;
+		  	bottom: 20px;
+		  	right: 30px;
+		  	z-index: 99;
+		  	font-size: 18px;
+		  	border: none;
+		  	outline: none;
+		  	background-color: #62676C;
+		  	color: white;
+		  	cursor: pointer;
+		  	padding: 15px;
+		  	border-radius: 4px;
+		  	opacity: 0.7;
+		}
+
+		#myBtn:hover {
+		  background-color: #555;
+		}
+
+		/*Back to top button end*/
 	</style>
 </head>
 <body>
@@ -290,19 +323,33 @@
 			</section>
 		</section>
 	</main>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 	<script type="text/javascript">
-		// Progress bars javascript
-		$(".meter > span").each(function () {
-		  $(this)
-		    .data("origWidth", $(this).width())
-		    .width(0)
-		    .animate(
-		      {
-		        width: $(this).data("origWidth")
-		      },
-		      1200
-		    );
-		});
+		
+		// Back to top Button start
+		
+		//Get the button
+		var mybutton = document.getElementById("myBtn");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		    mybutton.style.display = "block";
+		  } else {
+		    mybutton.style.display = "none";
+		  }
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+
+		// Back to top button end
+
 	</script>
 </body>
 </html>
