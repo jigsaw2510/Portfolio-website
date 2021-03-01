@@ -42,12 +42,31 @@
         	font-size: 40px;
         	padding: 15px;
         	color: #26A96C;
-        	margin: 15px;
+        	margin: 15px 50px;
         }
         .section-underline {
         	width: 50px;
-        	margin-left: 30px;
+        	margin-left: 65px;
         	border: 3px solid #62676C;
+        }
+        .stats {
+        	margin: 0 65px;
+        	font-size: 1em;
+        	width: 50.7vw;
+        	display: flex;
+        	justify-content: space-between;
+        	pointer-events: none;
+        	cursor: default;
+        	text-decoration: none;
+        	color: black;
+        }
+        .language {
+        	color: black;
+        	text-decoration: none;
+        }
+        .percent {
+        	color: black;
+        	text-decoration: none;
         }
         #pseudo-left-column {
         	width: 356px;
@@ -62,7 +81,7 @@
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: center;
-			position: absolute;
+			position: fixed;
         }
         #small-photo {
         	width: 100px;
@@ -114,18 +133,53 @@
         }
         #right-column {
         	width: 100%;
-        	background-color: blue;
         }
         #background-image {
-        	width: ;
-        	background-color: red;
+        	width: auto;
         	align-content: flex-end;
+        }
+        #right-column p {
+        	margin: 20px 65px;
+        	line-height: 20px;
+        	font-size: 1.1em;
         }
         @media (max-width: 800px) {
         	#left-column {
         		display: none;
         	}
         }
+        /* Progress bars start */
+
+        .meter {
+        	width: 50vw;
+		  	height: 20px; /* Can be anything */
+		  	position: relative;
+		  	margin: 0px 60px 30px 60px;
+		  	background: #62676C;
+		  	border-radius: 25px;
+		  	padding: 10px;
+		  	box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+		}
+		.meter > span {
+		  display: block;
+		  height: 100%;
+		  border-top-right-radius: 8px;
+		  border-bottom-right-radius: 8px;
+		  border-top-left-radius: 20px;
+		  border-bottom-left-radius: 20px;
+		  background-color: #26A96C;
+		  background-image: linear-gradient(
+		    center bottom,
+		    rgb(43, 194, 83) 37%,
+		    rgb(84, 240, 84) 69%
+		  );
+		  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+		    inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+		  position: relative;
+		  overflow: hidden;
+		}
+
+		/* Progress bars end */
 	</style>
 </head>
 <body>
@@ -142,12 +196,12 @@
 				<a href=""><img src="images/whatsapp-logo.png" class="icon"></a>
 			</div>
 			<nav id="menu">
-				<a href="">Home</a>
-				<a href="">About</a>
-				<a href="">Resume</a>
-				<a href="">Portfolio</a>
-				<a href="">Services</a>
-				<a href="">Contact</a>
+				<a href="#top">Home</a>
+				<a href="#about">About</a>
+				<a href="#resume">Resume</a>
+				<a href="#portfolio">Portfolio</a>
+				<a href="#services">Services</a>
+				<a href="#contact">Contact</a>
 			</nav>
 			<footer id="footer">
 				<p>&copy Copyright Catalin Gavrila</p>
@@ -162,16 +216,93 @@
 			<section id="about">
 				<h3 class="section-title">About</h3>
 				<hr class="section-underline">
+				<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
 			</section>
-			<section id="facts"></section>
-			<section id="skills"></section>
-			<section id="resume"></section>
-			<section id="portfolio"></section>
-			<section id="services"></section>
-			<section id="testimonials"></section>
-			<section id="contact"></section>
+			<section id="facts">
+				<h3 class="section-title">Facts</h3>
+				<hr class="section-underline">
+				<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+			</section>
+			<section id="skills">
+				<h3 class="section-title">Skills</h3>
+				<hr class="section-underline">
+				<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+				<div class="stats">
+					<a href="" class="language">Html</a>
+					<a href="" class="percent">90%</a>
+				</div>
+				<div class="meter">
+					<span style="width: 90%"></span>
+				</div>
+				<div class="stats">
+					<a href="" class="language">CSS</a>
+					<a href="" class="percent">70%</a>
+				</div>
+				<div class="meter">
+					<span style="width: 70%"></span>
+				</div>
+				<div class="stats">
+					<a href="" class="language">Javascript</a>
+					<a href="" class="percent">40%</a>
+				</div>
+				<div class="meter">
+					<span style="width: 40%"></span>
+				</div>
+				<div class="stats">
+					<a href="" class="language">PHP</a>
+					<a href="" class="percent">20%</a>
+				</div>
+				<div class="meter">
+					<span style="width: 20%"></span>
+				</div>
+				<div class="stats">
+					<a href="" class="language">SQL</a>
+					<a href="" class="percent">10%</a>
+				</div>
+				<div class="meter">
+					<span style="width: 10%"></span>
+				</div>	
+			</section>
+			<section id="resume">
+				<h3 class="section-title">Resume</h3>
+				<hr class="section-underline">
+				<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+			</section>
+			<section id="portfolio">
+				<h3 class="section-title">Portfolio</h3>
+				<hr class="section-underline">
+				<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+			</section>
+			<section id="services">
+				<h3 class="section-title">Services</h3>
+				<hr class="section-underline">
+				<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+			</section>
+			<section id="testimonials">
+				<h3 class="section-title">Testimonials</h3>
+				<hr class="section-underline">
+				<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+			</section>
+			<section id="contact">
+				<h3 class="section-title">Contact</h3>
+				<hr class="section-underline">
+				<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+			</section>
 		</section>
 	</main>
-
+	<script type="text/javascript">
+		// Progress bars javascript
+		$(".meter > span").each(function () {
+		  $(this)
+		    .data("origWidth", $(this).width())
+		    .width(0)
+		    .animate(
+		      {
+		        width: $(this).data("origWidth")
+		      },
+		      1200
+		    );
+		});
+	</script>
 </body>
 </html>
