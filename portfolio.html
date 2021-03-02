@@ -41,16 +41,16 @@
         	font-size: 40px;
         	padding: 0 15px 0 15px;
         	color: #26A96C;
-        	margin: 15px 50px;
+        	margin: 40px 50px 10px 50px;
         }
         .section-underline {
         	width: 50px;
         	margin-left: 65px;
-        	border: 3px solid #62676C;
+        	border: 2px solid #62676C;
         	margin-bottom: 30px;
         }
         .stats {
-        	margin: 0 30px;
+        	margin: 0 65px;
         	font-size: 1em;
         	width: 50.7vw;
         	display: flex;
@@ -69,9 +69,8 @@
         	text-decoration: none;
         }
         #pseudo-left-column {
-        	width: 356px;
+        	width: 390px;
 			height: 100vh;
-			background-color: white;
         }
         #left-column {
         	background-color: #62676C;
@@ -89,7 +88,7 @@
         	border: solid 7px #A1A4A7;
         	margin: 20px;
         }
-        h1 {
+        h3 {
         	color: white;
         }
         #menu {
@@ -137,18 +136,28 @@
         	width: 100%;
         	display: flex;
         }
+        #name {
+        	display: flex;
+        	flex-direction: column;
+        	justify-content: center;
+        	align-items: center;
+        }
         #quote {
         	width: 300px;
         	display: flex;
         	align-items: center;
         	text-align: center;
         	font-style: italic;
-        	padding: 0 20px 20px 0;
+        	padding: 20px;
         }
         #background-image {
         	width: 100%;
         	align-content: center;
         	justify-content: center;
+        }
+        h1 {
+        	font-size: 30px;
+        	margin-bottom: 30px;
         }
         #right-column p {
         	margin: 20px 65px;
@@ -171,9 +180,6 @@
         	#menu a {
         		margin: 2px;
         	}
-        	#footer {
-        		margin-bottom: 20px;
-        	}
         	.section-underline {
         		margin-left: 30px;
         	}
@@ -184,8 +190,8 @@
         		height: 100%;
         		min-height: 550px;
         	}
-        	#pseudo-column {
-        		width: 306px;
+        	#pseudo-left-column {
+        		height: 100vh;
         	}
         }
         @media (max-width: 800px) {
@@ -195,17 +201,29 @@
         	#left-column {
         		position: absolute;
         		width: 100%;
+        		margin-bottom: 0;
         	}
         	#menu {
         		justify-content: center;
         		align-items: center;
-        		overflow-y: visible;
         	}
         	#menu a {
         		margin: 4px;
         	}
         	#background-image img {
         		width: 100vw;
+        	}
+        	#name {
+        		display: none;
+        	}
+        	#pseudo-left-column {
+        		height: 98.4vh;
+        	}
+        	div[class*="meter"] { 
+        		margin: 0px 60px 30px 30px;
+        	}
+        	.stats {
+        		margin: 0 35px;
         	}
         }
         /* Progress bars start */
@@ -272,7 +290,7 @@
 		<div id="pseudo-left-column">
 		<section id="left-column" class="row">
 			<img src="images/small-photo.png" id="small-photo">
-			<h1>Catalin Gavrila</h1>
+			<h3>Catalin Gavrila</h3>
 			<div id="social-media" class="row">
 				<a href=""><img src="images/facebook-logo.png" class="icon"></a>
 				<a href=""><img src="images/twitter-logo.png" class="icon"></a>
@@ -296,7 +314,10 @@
 		</div>
 		<section id="right-column" class="column">
 			<div id="background-image" class="row">
-				<div id="quote">"Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate."</div>
+				<div id="name">
+					<h1>Catalin Gavrila</h1>
+					<div id="quote">"Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate."</div>
+				</div>
 				<img src="images/catalin.jpeg" id="main-image">
 			</div>
 			<section id="about">
