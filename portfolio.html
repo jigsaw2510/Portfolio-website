@@ -7,13 +7,300 @@
 	<title>
 		Catalin Gavrila
 	</title>
+<<<<<<< HEAD
+=======
+	<style type="text/css">
+		* {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+        	background-color: white;
+        	font-family: "Poppins", sans-serif;
+        }
+        .flex-container {
+        	display: flex;
+          	flex-direction: row;
+        }
+        .row {
+        	display: flex;
+          	flex-direction: row;
+          	flex-wrap: wrap;
+        }
+        .column {
+        	display: flex;
+          	flex-direction: column;
+          	justify-content: center;
+          	flex-wrap: wrap;
+        }
+        .icon {
+        	width: 30px;
+        	margin: 20px 5px;
+        }
+        .icon:hover {
+        	transform: scale(1.2);
+        }
+        .section-title {
+        	font-size: 40px;
+        	padding: 0 15px 0 15px;
+        	color: #26A96C;
+        	margin: 40px 50px 10px 50px;
+        }
+        .section-underline {
+        	width: 50px;
+        	margin-left: 65px;
+        	border: 2px solid #62676C;
+        	margin-bottom: 30px;
+        }
+        .stats {
+        	margin: 0 65px;
+        	font-size: 1em;
+        	width: 50.7vw;
+        	display: flex;
+        	justify-content: space-between;
+        	pointer-events: none;
+        	cursor: default;
+        	text-decoration: none;
+        	color: black;
+        }
+        .language {
+        	color: black;
+        	text-decoration: none;
+        }
+        .percent {
+        	color: black;
+        	text-decoration: none;
+        }
+        #pseudo-left-column {
+        	width: 390px;
+			height: 100vh;
+        }
+        #left-column {
+        	background-color: #62676C;
+        	width: 300px;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			position: fixed;
+        }
+        #small-photo {
+        	width: 100px;
+        	border-radius: 50%;
+        	border: solid 7px #A1A4A7;
+        	margin: 20px;
+        }
+        h3 {
+        	color: white;
+        }
+        #menu {
+        	display: flex;
+          	flex-direction: column;
+          	justify-content: flex-start;
+          	width: 100%;
+          	height: auto;
+          	overflow: auto;
+        }
+        #menu a {
+        	margin: 20px 30px;
+        	text-decoration: none;
+        	color: #E0E1E2;
+        	font-size: 22px;
+        	font-weight: thin;
+        	line-height: 30px;
+        }
+        #menu a:hover {
+        	color: white;
+        }
+        #footer {
+        	width: 100%;
+        	height: 120px;
+        	display: flex;
+        	flex-direction: column;
+        	justify-content: flex-end;
+        	position: absolute;
+        	bottom: 0;
+        	align-items: center;
+        	margin-bottom: 20px;
+        }
+        #footer p {
+        	margin-bottom: 20px;
+        	color: white;
+        }
+        #footer a {
+        	text-decoration: none;
+        	color: #E0E1E2;
+        }
+        #footer a:hover {
+        	color: white;
+        }
+        #right-column {
+        	width: 100%;
+        	display: flex;
+        }
+        #name {
+        	display: flex;
+        	flex-direction: column;
+        	justify-content: center;
+        	align-items: center;
+        }
+        #quote {
+        	width: 300px;
+        	display: flex;
+        	align-items: center;
+        	text-align: center;
+        	font-style: italic;
+        	padding: 20px;
+        }
+        #background-image {
+        	width: 100%;
+        	align-content: center;
+        	justify-content: center;
+        }
+        h1 {
+        	font-size: 30px;
+        	margin-bottom: 30px;
+        }
+        #right-column p {
+        	margin: 20px 65px;
+        	line-height: 20px;
+        	font-size: 1.1em;
+        }
+        @media (max-width: 992px), (max-height: 800px) {
+        	#menu {
+        		justify-content: center;
+        		align-items: center;
+        	}
+        	#right-column {
+        		width: 100%;
+        		align-content: center;
+        		justify-content: center;
+        	}
+        	#right-column p {
+        		margin: 20px 30px;
+        	}
+        	#menu a {
+        		margin: 2px;
+        	}
+        	.section-underline {
+        		margin-left: 30px;
+        	}
+        	.section-title {
+        		margin-left: 15px;
+        	}
+        	#left-column {
+        		height: 100%;
+        		min-height: 550px;
+        	}
+        	#pseudo-left-column {
+        		height: 100vh;
+        	}
+        }
+        @media (max-width: 800px) {
+        	#page-content {
+        		flex-direction: column;
+        	}
+        	#left-column {
+        		position: absolute;
+        		width: 100%;
+        		margin-bottom: 0;
+        	}
+        	#menu {
+        		justify-content: center;
+        		align-items: center;
+        	}
+        	#menu a {
+        		margin: 4px;
+        	}
+        	#background-image img {
+        		width: 100vw;
+        	}
+        	#name {
+        		display: none;
+        	}
+        	#pseudo-left-column {
+        		height: 90vh;
+        		width: 100%;
+        	}
+        	div[class*="meter"] { 
+        		margin: 0px 60px 30px 30px;
+        	}
+        	.stats {
+        		margin: 0 35px;
+        	}
+        }
+        /* Progress bars start */
+
+        .meter {
+        	width: 50vw;
+		  	height: 20px; /* Can be anything */
+		  	position: relative;
+		  	margin: 0px 60px 30px 60px;
+		  	background: #62676C;
+		  	border-radius: 25px;
+		  	padding: 10px;
+		  	box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+		}
+		.meter > span {
+		  display: block;
+		  height: 100%;
+		  border-top-right-radius: 8px;
+		  border-bottom-right-radius: 8px;
+		  border-top-left-radius: 20px;
+		  border-bottom-left-radius: 20px;
+		  background-color: #26A96C;
+		  background-image: linear-gradient(
+		    center bottom,
+		    rgb(43, 194, 83) 37%,
+		    rgb(84, 240, 84) 69%
+		  );
+		  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+		    inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+		  position: relative;
+		  overflow: hidden;
+		}
+
+		/* Progress bars end */
+
+		/*Back to top button start*/
+
+		#myBtn {
+			display: none;
+		  	position: fixed;
+		  	bottom: 20px;
+		  	right: 30px;
+		  	z-index: 99;
+		  	font-size: 18px;
+		  	border: none;
+		  	outline: none;
+		  	background-color: #62676C;
+		  	color: white;
+		  	cursor: pointer;
+		  	padding: 15px;
+		  	border-radius: 4px;
+		  	opacity: 0.7;
+		}
+
+		#myBtn:hover {
+		  background-color: #555;
+		}
+
+		/*Back to top button end*/
+	</style>
+>>>>>>> ee1321c6f391ac1d63d467c8c07491830ab04c76
 </head>
 <body>
 	<main id="page-content" class="flex-container">
 		<div id="pseudo-left-column">
 		<section id="left-column" class="row">
+<<<<<<< HEAD
 			<img src="images/small-photo2.png" id="small-photo">
 			<h1>Catalin Gavrila</h1>
+=======
+			<img src="images/small-photo.png" id="small-photo">
+			<h3>Catalin Gavrila</h3>
+>>>>>>> ee1321c6f391ac1d63d467c8c07491830ab04c76
 			<div id="social-media" class="row">
 				<a href=""><img src="images/facebook-logo.png" class="icon"></a>
 				<a href=""><img src="images/linkedin-logo.png" class="icon"></a>
@@ -34,8 +321,16 @@
 		</div>
 		<section id="right-column" class="column">
 			<div id="background-image" class="row">
+<<<<<<< HEAD
 				<div id="quote">“It’s not who you are that holds you back, it’s who you think you’re not.“</div>
 				<img src="images/catalin2.jpeg" id="main-image">
+=======
+				<div id="name">
+					<h1>Catalin Gavrila</h1>
+					<div id="quote">"Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate."</div>
+				</div>
+				<img src="images/catalin.jpeg" id="main-image">
+>>>>>>> ee1321c6f391ac1d63d467c8c07491830ab04c76
 			</div>
 			<section id="about">
 				<h3 class="section-title">About</h3>
