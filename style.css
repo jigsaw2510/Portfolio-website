@@ -260,3 +260,13 @@ h1 {
 }
 
 /*Back to top button end*/
+
+#resume a {
+	text-decoration: none;
+	font-weight: bold;
+}
+#resume a:hover {
+	text-decoration: none;
+	font-weight: bold;
+	color: green;
+}
